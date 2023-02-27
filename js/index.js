@@ -50,6 +50,7 @@ const showData = (phones, dataLimit) => {
   const noDataDiv = document.getElementById("no-data");
   if (phones.length === 0) {
     const noData = document.createElement("div");
+    noDataDiv.textContent = "";
     noData.innerHTML = `
     <h3 class="text-primary text-center">No Data Found</h3>
     `;
