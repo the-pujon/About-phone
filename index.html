@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Phone Hunter</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="container p-5">
+    <!-- header -->
+    <header class="d-flex flex-column align-items-center p-4 gap-3">
+      <h1>Welcome to Find your phone</h1>
+      <div>
+        <input id="input-phone" type="text" />
+        <button id="btn-phone-search" class="btn btn-success">search</button>
+      </div>
+    </header>
+
+    <!-- loading spinner -->
+    <div id="loader" class="d-none text-center" style="height: 400px">
+      <div
+        class="spinner-border"
+        style="width: 5rem; height: 5rem"
+        role="status"
+      >
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+    <!-- no data found -->
+    <div id="no-data" class="text-center"></div>
+    <!-- card section -->
+    <section>
+      <div id="phone-card" class="row row-cols-1 row-cols-md-3 g-4"></div>
+    </section>
+
+    <!-- show all button -->
+    <div id="show-all" class="d-none text-center">
+      <button id="btn-show-all" class="btn btn-success">Show All</button>
+    </div>
+
+    <!-- modal section -->
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div id="phone-modal-container" class="modal-dialog"></div>
+    </div>
+
+    <!-- Bootstrap js file -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <!-- all js files -->
+    <script src="./js/index.js"></script>
+  </body>
+</html>
